@@ -1,0 +1,51 @@
+<app-header></app-header>
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+    <div class="header-wrapper">
+      <img src="./assets/img/default-avatar.png">
+      <span class="username-text" *ngIf="!isCollapsed">
+        {{ username }}
+      </span>
+      <div (click)="goSetting()" class="floating-btn header-btn" *ngIf="!isCollapsed">
+        <i class="anticon anticon-setting"></i>
+      </div>
+    </div>
+
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu>
+        <span title><i nz-icon type="user"></i><span class="nav-text">User</span></span>
+        <ul>
+          <li nz-menu-item (click)="tabs('page1')">Tom</li>
+          <li nz-menu-item (click)="tabs('page1')">Bill</li>
+          <li nz-menu-item (click)="tabs('page1')">Alex</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i nz-icon type="team"></i><span class="nav-text">Team</span></span>
+        <ul>
+          <li nz-menu-item (click)="tabs('page1')">Team 1</li>
+          <li nz-menu-item (click)="tabs('page1')">Team 2</li>
+        </ul>
+      </li>
+      <li nz-menu-item (click)="tabs('page1')"><span><i nz-icon type="file"></i><span class="nav-text">File</span></span></li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="background: #fff; padding:0;">
+      <i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i>
+    </nz-header>
+    <nz-content style="margin:0 16px;">
+      <div style="padding:24px; background: #fff; min-height: 680px;">
+        <div class="content">
+          <app-tab>
+            <router-outlet name="layout-content"></router-outlet>
+          </app-tab>
+        </div>
+      </div>
+    </nz-content>
+    <nz-footer style="text-align: center;">ng-demo ©2019 Angular 框架调研</nz-footer>
+  </nz-layout>
+</nz-layout>
+<ng-template #trigger>
+  <i nz-icon type="up"></i>
+</ng-template>

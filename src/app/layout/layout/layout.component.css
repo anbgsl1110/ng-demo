@@ -1,0 +1,48 @@
+:host ::ng-deep .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+:host ::ng-deep .trigger:hover {
+  color: #1890ff;
+}
+
+:host ::ng-deep .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, .2);
+  margin: 16px;
+}
+
+div.header-wrapper {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  line-height: 0;
+}
+
+div img {
+  margin-left: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.username-text {
+  margin-left: 8px;
+  flex: 1;
+  line-height: 40px;
+  font-size: 14px;
+  color: white;
+}
+
+.header-btn {
+  color: white;
+}
+
+div i {
+  font-size: 18px;
+}
