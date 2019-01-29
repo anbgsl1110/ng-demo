@@ -10,6 +10,7 @@ export class ContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    alert('page3');
   }
 
 }

@@ -6,8 +6,10 @@
   <nz-tab *ngFor="let menu of menuList" [nzTitle]="nzTabHeading">
     <ng-template #nzTabHeading>
       <div>
-        {{menu.title}}
-        <i *ngIf="menu.isRemove" (click)="closeUrl(menu.url)" class="anticon anticon-cross" ></i>
+        <!--{{menu.title}}
+        <i *ngIf="menu.isRemove" (click)="closeUrl(menu.url)" class="anticon anticon-cross" ></i>-->
+        hhhhh{{menu.url}}
+        <i nz-icon type="close" (click)="closeUrl(menu.url)" class="ant-tabs-close-x"></i>
       </div>
     </ng-template>
   </nz-tab>

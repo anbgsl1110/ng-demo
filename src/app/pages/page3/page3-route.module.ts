@@ -4,7 +4,8 @@ import {Page3Component} from './page3.component';
 export const ROUTES: Routes = [
   {
     path: '', // 当访问 /page3的时候显示Page3Component组件
-    component: Page3Component
+    component: Page3Component,
+    outlet:'popup'
   }
 ];
 @NgModule({

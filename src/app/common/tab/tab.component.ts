@@ -24,11 +24,10 @@ export class TabComponent {
       filter(event => event instanceof NavigationEnd),
       map(() => this.activatedRoute),
       map(route => {
-        alert(route);
         while (route.firstChild) { route = route.firstChild; }
         return route;
       }),
-      filter(route => route.outlet === 'layout-content'),
+      filter(route => route.outlet === 'primary'),
       mergeMap(route => route.data)
     ).subscribe((event) => {
         // 路由data的标题

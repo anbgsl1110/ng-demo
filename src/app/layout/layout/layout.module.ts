@@ -14,7 +14,7 @@ import {LayoutRouteModule} from "./layout-route.module";
   ],
   imports: [
     CommonModule,
-    NgZorroAntdModule.forRoot(),
+    NgZorroAntdModule,
     LayoutRouteModule,
   ]
 })

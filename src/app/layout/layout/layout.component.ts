@@ -38,7 +38,7 @@ export class LayoutComponent implements OnInit {
    * 路由方式添加tab
    */
   tabs(data) {
-    this.router.navigate([data]);
+    this.router.navigate([{outlets: { popup: data }}]);
   }
 
 }

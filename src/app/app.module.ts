@@ -16,7 +16,6 @@ import {SettingModule} from "./pages/setting/setting.module";
 import {SimpleReuseStrategy} from "./services/SimpleReuseStrategy";
 import {RouteReuseStrategy} from "@angular/router";
 import {LayoutModule} from "./layout/layout/layout.module";
-import {LayoutRouteModule} from "./layout/layout/layout-route.module";
 
 registerLocaleData(zh);
 
@@ -34,7 +33,6 @@ registerLocaleData(zh);
     SetupModule,
     SettingModule,
     LayoutModule,
-    LayoutRouteModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: zh_CN },
